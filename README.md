@@ -17,23 +17,24 @@ It assumes zero knowledge of LLMs, prompting and audio models, everything is cov
 
 Here is step by step thought (pun intended) for the task:
 
-- Step 1: Pre-process PDF: Use `Llama-3.2-1B-Instruct` to pre-process the PDF and save it in a `.txt` file.
-- Step 2: Transcript Writer: Use `Llama-3.1-70B-Instruct` model to write a podcast transcript from the text
-- Step 3: Dramatic Re-Writer: Use `Llama-3.1-8B-Instruct` model to make the transcript more dramatic
+Powered by Groq:
+- Step 1: Pre-process PDF: Use `Llama-3.2-1b-preview` to pre-process the PDF and save it in a `.txt` file.
+- Step 2: Transcript Writer: Use `Llama-3.1-70b-versatile` model to write a podcast transcript from the text
+- Step 3: Dramatic Re-Writer: Use `Llama-3.1-8B-instant` model to make the transcript more dramatic
+
+Text to speech step:
 - Step 4: Text-To-Speech Workflow: Use `parler-tts/parler-tts-mini-v1` and `bark/suno` to generate a conversational podcast
 
 Note 1: In Step 1, we prompt the 1B model to not modify the text or summarize it, strictly clean up extra characters or garbage characters that might get picked due to encoding from PDF. Please see the prompt in Notebook 1 for more details.
 
-Note 2: For Step 2, you can also use `Llama-3.1-8B-Instruct` model, we recommend experimenting and trying if you see any differences. The 70B model was used here because it gave slightly more creative podcast transcripts for the tested examples.
+Note 2: For Step 2, you can also use `Llama-3.1-8B-instant` model, we recommend experimenting and trying if you see any differences. The 70B model was used here because it gave slightly more creative podcast transcripts for the tested examples.
 
 Note 3: For Step 4, please try to extend the approach with other models. These models were chosen based on a sample prompt and worked best, newer models might sound better. Please see [Notes](./TTS_Notes.md) for some of the sample tests.
 
 ### Detailed steps on running the notebook:
 
-Requirements: GPU server or an API provider for using 70B, 8B and 1B Llama models.
-For running the 70B model, you will need a GPU with aggregated memory around 140GB to infer in bfloat-16 precision.
-
-Note: For our GPU Poor friends, you can also use the 8B and lower models for the entire pipeline. There is no strong recommendation. The pipeline below is what worked best on first few tests. You should try and see what works best for you!
+Requirements: Groq for using 70B, 8B and 1B Llama models.
+For running the text to speech step, you will need a GPU.
 
 - Before getting started, please make sure to login using the `huggingface cli` and then launch your jupyter notebook server to make sure you are able to download the Llama models.
 
@@ -53,17 +54,17 @@ This notebook is used for processing the PDF and processing it using the new Fea
 
 Update the first cell with a PDF link that you would like to use. Please decide on a PDF to use for Notebook 1, it can be any link but please remember to update the first cell of the notebook with the right link. 
 
-Please try changing the prompts for the `Llama-3.2-1B-Instruct` model and see if you can improve results.
+Please try changing the prompts for the `Llama-3.2-1B-preview` model and see if you can improve results.
 
 - Notebook 2:
 
-This notebook will take in the processed output from Notebook 1 and creatively convert it into a podcast transcript using the `Llama-3.1-70B-Instruct` model. If you are GPU rich, please feel free to test with the 405B model!
+This notebook will take in the processed output from Notebook 1 and creatively convert it into a podcast transcript using the `Llama-3.1-70B-versatile` model. If you are GPU rich, please feel free to test with the 405B model!
 
 Please try experimenting with the System prompts for the model and see if you can improve the results and try the 8B model as well here to see if there is a huge difference!
 
 - Notebook 3:
 
-This notebook takes the transcript from earlier and prompts `Llama-3.1-8B-Instruct` to add more dramatization and interruptions in the conversations. 
+This notebook takes the transcript from earlier and prompts `Llama-3.1-8B-instant` to add more dramatization and interruptions in the conversations. 
 
 There is also a key factor here: we return a tuple of conversation which makes our lives easier later. Yes, studying Data Structures 101 was actually useful for once!
 
