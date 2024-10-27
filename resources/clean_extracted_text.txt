@@ -1,0 +1,64 @@
+A Survey on Knowledge Distillation of Large Language Models
+
+Xiaohan Xu1, Ming Li2, Chongyang Tao3, Tao Shen4, Reynold Cheng1, Jinyang Li1, Can Xu5, Dacheng Tao6, Tianyi Zhou2
+1The University of Hong Kong
+2University of Maryland
+3Microsoft
+4University of Technology Sydney
+5Peking University
+6The University of Sydney
+shawnxxh,chongyangtao,hishentao @gmail.com @umd.edu ckcheng@cs.hku.hk
+**Advanced Knowledge to Smaller Models and its Utility in Model Compression and Self-Improvement**
+
+**Survey of Key Mechanisms and Cognitive Enhancements**
+
+**Foundational Pillars: Algorithm, Skill, and Verticalization**
+
+The survey examines three critical pillars: algorithm, skill, and verticalization, providing a comprehensive analysis of Knowledge Distillation (KD) mechanisms and their practical implications across various fields.
+
+**Data Augmentation (DA) and Knowledge Distillation (KD)**
+
+The interaction between data augmentation and KD is crucial, as DA emerges as a powerful paradigm within the KD framework to enhance the performance of Large Language Models (LLMs). By leveraging DA, KD can generate context-rich, skill-specific training data, transcending traditional boundaries and enabling open-source models to approximate the contextual adeptness and deep semantic insights characteristic of proprietary models.
+distillation and proposing future research directions. By bridging the gap between proprietary and open-source Large Language Models (LLMs), this survey underscores the potential for more accessible, efficient, and powerful AI solutions. Most importantly, we firmly advocate for compliance with the legal terms that regulate the use of LLMs, ensuring ethical and lawful application of knowledge. An associated Github repository is available at https://github.com/Tebmer/Awesome-Knowledge-Distillation-of-LLMs. Index Terms —Large language models, knowledge distillation, data augmentation, skill distillation, supervised fine-tuning.
+complexity, have unlocked new realms of possibility, from generating human-like text to offering sophisticated problem-solving capabilities. The core significance of these LLMs lies in their emergent abilities, a phenomenon where the models display capabilities beyond their explicit training objectives, enabling them to tackle a diverse array of tasks with remarkable proficiency. These models excel in understanding and generation, driving applications from creative generation to complex problem-solving, and have the potential to revolutionize industries, augment human creativity, and improve overall human experience.
+Our reliance on technology is redefining the way we interact with the world, and it's no different for our digital presence. Despite the impressive capabilities of proprietary LLMs like GPT-4 and Gemini, their limitations are significant, particularly when compared to open-source alternatives. A major drawback is their restricted accessibility, making them inaccessible to individuals and smaller organizations. This limitation is exacerbated by the substantial usage fees associated with these proprietary models, which further restricts their usability.
+Significant challenges in leveraging the full potential of proprietary LLMs include:
+
+- High licensing fees or restrictive usage policies
+- Limited scalability
+- Dependence on proprietary infrastructure and data
+- Lack of transparency and accountability in training and deployment
+- Potential for bias and unfairness in model output
+
+In contrast, open-source models like LLaMA and Mistral offer several advantages:
+
+- Accessibility and adaptability, allowing for a broader range of users
+- Freedom from licensing fees and restrictive usage policies
+- Customizable nature, enabling tailored solutions to specific needs
+- Greater transparency and accountability in training and deployment
+- Potential for more diverse applications and innovative uses
+resources compared to their proprietary counterparts often result in lower per- formance on real-world tasks with a bunch of instruc- tions
+recognizing the disparities between proprietary and open-source LLMs, knowledge distillation techniques have surged as a means to bridge the performance gap between these models (Gou et al., 2021; Gupta and Agrawal, 2022). This process involves leveraging the advanced capabilities of leading proprietary models like GPT-4 or Gemini to enhance the competencies of open-source LLMs. This is akin to transferring the 'knowledge' of a highly skilled teacher to a student, where the student learns to mimic the performance characteristics of the teacher.
+paradigm to achieve knowledge distillation of LLMs, where a small seed of knowledge is used to prompt the LLM to generate more data with respect to a specific skill or domain, fundamental role in compressing LLMs, making them more efficient without significant loss in performance, and more recently, employing open-source LLMs as teachers for their own self-improvement has emerged as a promising approach, enhancing their capabilities significantly.
+compression for efficiency, and 3) an emerging trend of self-improvement via self-generated knowledge. (e.g., in-context learning (Huang et al., 2022a) and instruction following (Taori et al., 2023)), improved alignment with user intents (e.g., human values/principles (Cui et al., 2023a), and thinking patterns like chain-of-thought (CoT) (Mukherjee et al., 2023)), and NLP task specialization (e.g., semantic understanding (Ding et al., 2023a), and code generation (Chaudhary, 2023)). These skills are essential for a wide range of applications, from casual conversations to complex problem-solving in specialized domains.
+been extensively trained and fine-tuned in knowledge distillation in the era of LLMs are multifaceted and transformative 
+through a suite of distillation techniques the gap between proprietary and open-source models is significantly narrowed and even filled 
+this process not only streamlines computational requirements but also enhances environmental sustainability of AI operations 
+as open-source models become more proficient with lesser computational overhead 
+fosters a more accessible and equitable AI landscape where smaller entities and individual researchers gain access to state-of-the-art capabilities 
+encouraging wider participation and diversity in AI advancements this democratization of technology leads to more robust versatile and accessible AI solutions 
+catalyzing innovation and growth across various industries
+and research domains
+
+The rapidly evolving landscape of AI, with various open-source language models (LLMs) emerging, has created a pressing need for a comprehensive survey on knowledge distillation. As AI continues to permeate multiple sectors, the ability to efficiently and effectively distill knowledge from proprietary LLMs to open-source ones has become an indispensable requirement.
+
+This growing demand is driven by the increasing demand for more accessible, cost-effective, and adaptable AI solutions that can cater to a diverse range of applications, including education, healthcare, finance, and more. The increasing complexity of these models has also necessitated a deeper understanding of knowledge distillation techniques to effectively transfer knowledge from proprietary to open-source LLMs.
+
+This need is particularly pressing in the fields of law, medicine, and science, where the ability to efficiently distill knowledge from complex models is crucial for informed decision-making and research. The integration of AI into these sectors has also created new opportunities for knowledge distillation, but the challenges of scaling this process have yet to be fully addressed.
+
+This growing need for knowledge distillation has sparked a flurry of research in various domains, including law, medicine, and science. The use of open-source LLMs, such as those developed by Google and Microsoft, has also opened up new possibilities for knowledge distillation, particularly in the areas of natural language processing and machine learning.
+
+As AI continues to advance, the importance of knowledge distillation will only continue to grow, driving the development of more sophisticated and effective distillation techniques. This survey will provide a comprehensive overview of the current state of knowledge distillation, highlighting the challenges and opportunities in this field, and exploring the potential applications and implications for various domains.
+**ReinforcementLearningoutputsreward RM!(·)distill SupervisedFine-tuningX,Y preferenceRankOptimizationy,1y,2y3y1y2y3≻≻rank**
+
+**DataCuration X,YrawdatasynthesizefeedbackFeedback input outputSelf-Knowledge outputinputinput YlabelLabelingExpansion X,YdemonstrationsexpandFeature featureinput,outputextractSec.4Sec.5 Sec.3.1Sec.3.2①②③④ Fig. 2: An overview of this survey on knowledge distillation of large language models. Note that ‘Section’ is abbreviated as ‘Sec.’ in this figure. RM S(·)denotes the student reward model. 1⃝2⃝3⃝4⃝denote the steps in KD of LLMs. of applications and users. A survey in this field is vital for synthesizing the current methodologies, challenges, and breakthroughs in knowledge distillation. It may serve as a beacon for researchers and practitioners alike, guiding them to distill complex AI capabilities into more manageable and accessible forms. Moreover, such a survey can illuminate the path forward, identifying gaps in current techniques and proposing directions for
