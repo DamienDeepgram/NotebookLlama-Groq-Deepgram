@@ -1,7 +1,7 @@
 ## NotebookLlama Powered by Groq: An Open Source version of NotebookLM, Lightning Fast on Groq
 
 > [!IMPORTANT]
-> This repository is a fork of the original [NotebookLlama](https://github.com/meta-llama/llama-recipes/tree/main/recipes/quickstart/NotebookLlama) repository. The original repository is licensed under the [MIT License](https://github.com/meta-llama/llama-recipes/blob/main/LICENSE).
+> This repository is a fork of the original [NotebookLlama](https://github.com/meta-llama/llama-recipes/tree/main/recipes/quickstart/NotebookLlama) repository. The original repository is licensed under [Meta's License](https://github.com/meta-llama/llama-recipes/tree/main?tab=readme-ov-file#license).
 
 ![NotebookLlama](./resources/Outline.jpg)
 
